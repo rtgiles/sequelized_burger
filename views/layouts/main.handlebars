@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tab Title -->
+    <title>Have A Burger!</title>
+    <!-- Tab Image -->
+    <link rel="icon" href='/assets/images/01-The-Biggest-Burger-in-the-World-Is-1774-Pounds-and-Ready-for-You-to-Order-at-This-Restaurant-Mallies-Sports-Grill-and-Bar-1024x683.jpg'>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom Styling -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/burger_style.css">
+  </head>
+  <body>
+  
+    <!-- Page Container -->
+    <div class="container">
+      
+      <br>
+
+      <!-- Burger Image -->
+      <center>
+        <div class="row">
+          <img src="/assets/images/01-The-Biggest-Burger-in-the-World-Is-1774-Pounds-and-Ready-for-You-to-Order-at-This-Restaurant-Mallies-Sports-Grill-and-Bar-1024x683.jpg">
+        </div>
+      </center>
+
+      <!-- Page Title -->
+      <center>
+        <h1 >Have A Burger! </h1>
+      </center>
+      
+      <br>
+      
+
+      <!-- Burger Content from index.handlebars -->
+      {{{body}}}
+
+
+      <br><br>
+
+      <!-- Input New Burgers Form -->
+      <form action="burger/create" method="POST"> 
+        
+        <!-- Text Area Input -->
+        <div class="row">
+          <!-- Empty Div to help center textarea -->
+          <div class="col-md-3"></div> 
+
+          <!-- Burger Input Box -->
+          <div class="form-group col-md-6">
+            <center><label for="new_burger" class="red_font">Request a new burger and place your order!</label></center>
+            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+          </div>
+
+          <!-- Empty Div to help center textarea -->
+          <div class="col-md-3"></div> 
+        </div>
+      
+        <!-- Submit Button -->
+        <center>
+          <audio id="sound1" src="/assets/sounds/Frying_Food-J_Bravo-1591470421.mp3" preload="auto"></audio>
+          <button id="submit-button" type="submit" class="btn btn-danger" onclick="document.getElementById('sound1').play();">Place Order</button>
+        </center>
+
+      </form>
+
+      <br>
+
+    </div>
+
+    <!-- Link in jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    
+
+  </body>
+</html>

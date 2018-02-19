@@ -1,0 +1,22 @@
+img {
+    height: auto; 
+    width: auto; 
+    max-width: 500px; 
+    max-height: 500px;
+    border-radius: 50%
+}
+
+body {
+    background-image: url(/assets/images/EmpireDiner_010.jpg);
+    background-size: 100%
+}
+
+h1 {
+    color: black;
+    background-color: blue
+}
+
+h3 {
+    color: black;
+    background-color: blue
+}
