@@ -7,6 +7,8 @@ var exphbs= require ('express-handlebars');
 var app= express();
 var PORT= 3000;
 
+var models= require('./models');
+
 // app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(bodyParser.text());
@@ -21,6 +23,8 @@ var routes = require('./controllers/burgers_controllers.js');
 // require('./app/routing/htmlRoutes.js')(app);
 app.use(routes);
 
-app.listen(PORT, function() {
+models.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+});
