@@ -17,7 +17,8 @@
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "host": "postgres://cnakqddjnzuipv:e3c343b1597c5bed589d44d62843120d7b238b3f9d152493295e9a1cd308a011@ec2-54-197-254-189.compute-1.amazonaws.com:5432/dbkpkk6kndom97",
+    "dialect": "mysql",
+    "use_env_variable": null
   }
 }
